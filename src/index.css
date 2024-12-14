@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* _____________________________*\
+*BASE
+\*______________________________*/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply bg-zinc-900 text-zinc-50;
+}
+
+
+/* _____________________________*\
+*TYPOGRAPHY
+\*______________________________*/
+.headline-1, .headline-2 {
+  @apply max-w-max;
+  background: -webkit-linear-gradient(0deg, #fafafa, #a1a1a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.headline-1 {
+  @apply text-5xl leading-tight font-semibold lg:text-[55px] lg:leading-[1.15]
+}
+.headline-2 {
+  @apply text-3xl lg:text-4xl lg:leading-tight font-semibold
+}
+.title-1 {
+  @apply text-[22px] font-normal
+}
+
+.container {
+  @apply px-4 mx-auto lg:px-8 xl:max-w-6xl
+}
+.img-box {
+  @apply bg-zinc-700 overflow-hidden;
+}
+.img-cover {
+  @apply w-full h-full object-cover
+}
+.section {
+  @apply pt-20 lg:pt-32
+}
+
+/* _____________________________*\
+*Components
+\*______________________________*/
+/* Menu btn */
+.menu-btn {
+  @apply w-12 h-12 grid place-items-center bg-zinc-50/10
+   rounded-full ring-2 ring-zinc-50/[0.1] backdrop-blur-lg
+   transition-all duration-300 ease-in-out transform hover:bg-zinc-50/15
+    hover:scale-105 focus:outline-none active:shadow-lg active:shadow-zinc-500/50;
+  position: fixed;
+  top: 20px;
+  right: 1rem; 
+  z-index: 60; 
+}
+
+/* Navbar */
+.Navbar {
+  @apply absolute top-full mt-2 right-0 min-w-[10rem] p-4 bg-zinc-50/30 
+  rounded-2xl ring-2 ring-zinc-50/5 scale-90 isolate backdrop-blur-md 
+  opacity-0 invisible transition-all duration-500 ease-in-out transform 
+  filter md:static md:flex md:items-center md:mt-3 md:z-0 md:relative md:opacity-100 md:blur-0 
+  md:visible md:scale-100 backdrop-blur-2xl
+}
+
+.Navbar.active {
+  @apply opacity-100 scale-100 blur-0 visible;
+}
+.nav-link {
+  @apply grid items-center h-9 px-4 py-0 text-sm font-medium tracking-wide text-zinc-50/50
+  hover:text-zinc-50 transition-colors
+}
+.nav-link.active {
+  @apply text-zinc-900 duration-500
+}
+.Navbar .active-box {
+  @apply absolute top-4 left-2 right-2 h-9 bg-zinc-50 rounded-lg
+         -z-10 transition-all duration-500 ease-in-out;
+}
+
+@layer utilities {
+  .transition-top-left {
+    transition: top 0s ease-in-out, left 0s ease-in-out;
+  }
+}
+/* Button */
+.btn {
+  @apply max-w-max h-9 flex items-center gap-2 px-4 rounded-xl font-medium 
+  text-sm ring-1 ring-zinc-50/5 ring-inset transition-[background-colors]
+}
+.btn-secondary {
+  @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80
+}
+/* Button */
+.btn .material-symbols-rounded {
+  @apply text-[18px]
+}
+.btn:has( .material-symbols-rounded) {
+  @apply pr-3
+}
+.btn-primary {
+  @apply h-11 bg-sky-400 text-zinc-950 hover:bg-sky-300 active:bg-sky-400
+}
+.btn-outline {
+  @apply h-11 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800
+}
+.label {
+  @apply block text-zinc-200 text-sm font-normal mb-2
+}
+.text-field {
+  @apply block outline-none w-full px-3 py-3 text-sm bg-zinc-800 
+  rounded-xl ring-1 ring-inset ring-transparent transition-shadow
+   hover:ring-zinc-50/5 focus:ring-sky-400 focus:ring-2  
+}
+.text-field { 
+  @apply text-zinc-400
+}
+
+
