@@ -18,9 +18,9 @@ const works = [
   },
   {
     imgSrc: "/images/project-2.png",
-    title: "My Portofolio",
-    tags: ["API", "React JS"],
-    projectLink: "http://localhost:5173/#contact",
+    title: "SahelConnect",
+    tags: ["React Native", "Tailwinds CSS", "JavaScript"],
+    projectLink: "http://",
   },
   {
     imgSrc: "/images/project-3.png",
@@ -42,8 +42,26 @@ const works = [
   },
   {
     imgSrc: "/images/project-6.png",
-    title: "App GAZ-INA",
-    tags: ["React Native", "Development"],
+    title: "GAZ-INA Livreur",
+    tags: ["React Native", "JavaScript", "NodeJS"],
+    projectLink: "",
+  },
+  {
+    imgSrc: "/images/project-7.png",
+    title: "GAZ-INA Client",
+    tags: ["React Native", "JavaScript", "NodeJS"],
+    projectLink: "",
+  },
+  {
+    imgSrc: "/images/project-8.png",
+    title: "GAZ-INA Admin",
+    tags: ["ReactJS", "JavaScript", "NodeJS"],
+    projectLink: "",
+  },
+  {
+    imgSrc: "/images/project-9.png",
+    title: "SahelConnect",
+    tags: ["React Native", "JavaScript"],
     projectLink: "",
   },
 ];
