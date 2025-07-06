@@ -146,7 +146,7 @@ const Testimonials = () => {
                   </svg>
                 </div>
                 <blockquote className="text-zinc-200 text-lg leading-relaxed mb-6">
-                  "{testimonials[currentIndex].content}"
+                  &quot;{testimonials[currentIndex].content}&quot;
                 </blockquote>
                 <div className="flex items-center gap-2 text-sm text-zinc-400">
                   <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>

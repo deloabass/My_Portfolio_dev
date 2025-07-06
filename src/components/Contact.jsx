@@ -26,9 +26,9 @@ const contactMethods = [
       </svg>
     ),
     title: "Téléphone",
-    description: "+223 XX XX XX XX",
+    description: "+227 85 82 24 80",
     action: "Appeler maintenant",
-    href: "tel:+22300000000",
+    href: "tel:+227 85 82 24 80",
     color: "from-green-400 to-green-600"
   },
   {
@@ -39,7 +39,7 @@ const contactMethods = [
       </svg>
     ),
     title: "Localisation",
-    description: "Bamako, Mali",
+    description: "Niamey, Niger",
     action: "Voir sur la carte",
     href: "#",
     color: "from-purple-400 to-purple-600"
@@ -58,7 +58,7 @@ const socialLinks = [
     label: "GitHub"
   },
   {
-    href: "https://www.linkedin.com/in/soumana-abassa-01a2a9265/",
+    href: "https://www.linkedin.com/in/abassa-soumana/",
     icon: (
       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
         <path d="M5.75 3C4.24011 3 3 4.24011 3 5.75V18.25C3 19.7599 4.24011 21 5.75 21H18.25C19.7599 21 21 19.7599 21 18.25V5.75C21 4.24011 19.7599 3 18.25 3H5.75ZM5.75 4.5H18.25C18.9491 4.5 19.5 5.05089 19.5 5.75V18.25C19.5 18.9491 18.9491 19.5 18.25 19.5H5.75C5.05089 19.5 4.5 18.9491 4.5 18.25V5.75C4.5 5.05089 5.05089 4.5 5.75 4.5ZM7.75 6.5C7.41848 6.5 7.10054 6.6317 6.86612 6.86612C6.6317 7.10054 6.5 7.41848 6.5 7.75C6.5 8.08152 6.6317 8.39946 6.86612 8.63388C7.10054 8.8683 7.41848 9 7.75 9C8.08152 9 8.39946 8.8683 8.63388 8.63388C8.8683 8.39946 9 8.08152 9 7.75C9 7.41848 8.8683 7.10054 8.63388 6.86612C8.39946 6.6317 8.08152 6.5 7.75 6.5ZM7 10C6.7235 10 6.5 10.2235 6.5 10.5V17C6.5 17.2765 6.7235 17.5 7 17.5H8.5C8.7765 17.5 9 17.2765 9 17V10.5C9 10.2235 8.7765 10 8.5 10H7ZM10.5 10C10.2235 10 10 10.2235 10 10.5V17C10 17.2765 10.2235 17.5 10.5 17.5H12C12.2765 17.5 12.5 17.2765 12.5 17V13.25C12.5 12.5605 13.0605 12 13.75 12C14.4395 12 15 12.5605 15 13.25V17C15 17.2765 15.2235 17.5 15.5 17.5H17C17.2765 17.5 17.5 17.2765 17.5 17V13C17.5 11.3455 16.1545 10 14.5 10C13.731 10 13.0315 10.293 12.5 10.7705V10.5C12.5 10.2235 12.2765 10 12 10H10.5Z"/>
@@ -126,6 +126,7 @@ const Contact = () => {
       } else {
         setSubmitStatus('error');
       }
+    // eslint-disable-next-line no-unused-vars
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -135,7 +136,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section bg-gradient-to-b from-zinc-900 to-zinc-800">
+    <section id="contact" className="section bg-gradient-to-b py-12 from-zinc-900 to-zinc-800">
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="headline-2 mb-6 reveal-up">
@@ -156,7 +157,7 @@ const Contact = () => {
               </h3>
               <p className="text-zinc-400 mb-8 leading-relaxed">
                 Je suis toujours ouvert aux nouvelles opportunités et collaborations. 
-                N'hésitez pas à me contacter pour discuter de votre projet.
+                N&apos;hésitez pas à me contacter pour discuter de votre projet.
               </p>
             </div>
 
@@ -224,7 +225,7 @@ const Contact = () => {
               )}
               {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400">
-                  ❌ Erreur lors de l'envoi. Veuillez réessayer.
+                  ❌ Erreur lors de l&apos;envoi. Veuillez réessayer.
                 </div>
               )}
 
@@ -314,7 +315,7 @@ const Contact = () => {
               </button>
 
               <p className="text-zinc-500 text-sm mt-4 text-center">
-                Je m'engage à répondre dans les 24h ouvrées.
+                Je m&apos;engage à répondre dans les 24h ouvrées.
               </p>
             </form>
           </div>

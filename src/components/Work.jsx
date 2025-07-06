@@ -17,17 +17,26 @@ const works = [
     category: "mobile",
     featured: true
   },
+  // {
+  //   imgSrc: "/images/connectSahel-left.png",
+  //   title: "SahelConnect",
+  //   description: "Plateforme de connexion sociale pour l'Afrique de l'Ouest",
+  //   tags: ["React Native", "Tailwind CSS", "JavaScript"],
+  //   projectLink: "http://",
+  //   category: "mobile",
+  //   featured: true
+  // },
   {
-    imgSrc: "/images/project-2.png",
-    title: "SahelConnect",
-    description: "Plateforme de connexion sociale pour l'Afrique de l'Ouest",
-    tags: ["React Native", "Tailwind CSS", "JavaScript"],
-    projectLink: "http://",
+    imgSrc: "/images/boukata-ta.jpeg",
+    title: "Boukata Ta",
+    description: "Application de gestion de commandes pour les restaurants",
+    tags: ["React Native", "Node.js", "MongoDB"],
+    projectLink: "https://",
     category: "mobile",
     featured: true
   },
   {
-    imgSrc: "/images/project-3.png",
+    imgSrc: "/images/Ihambaobab.png",
     title: "Web Ihambaobab",
     description: "Site web moderne avec API intégrée",
     tags: ["React JS", "API", "Tailwind CSS"],
@@ -36,11 +45,11 @@ const works = [
     featured: false
   },
   {
-    imgSrc: "/images/project-4.png",
+    imgSrc: "/images/InscriptionCodeloccol.png",
     title: "Admission CodeLoccol",
     description: "Système d'admission en ligne avec interface moderne",
     tags: ["Next.js", "Node.js", "PostgreSQL"],
-    projectLink: "https://deloabass.github.io/portofolio_image-Rotate/",
+    projectLink: "https://apply.codeloccol.org/",
     category: "web",
     featured: true
   },
@@ -48,25 +57,25 @@ const works = [
     imgSrc: "/images/project-5.png",
     title: "AirTravel Website",
     description: "Site de réservation de voyages avec API intégrée",
-    tags: ["React JS", "API", "Stripe"],
+    tags: ["HTML", "CSS"],
     projectLink: "https://deloabass.github.io/Sit_de_voyage/",
     category: "web",
     featured: false
   },
   {
-    imgSrc: "/images/project-6.png",
+    imgSrc: "/images/GazInaLivreur.png",
     title: "GAZ-INA Livreur",
     description: "App de livraison pour les livreurs de gaz",
-    tags: ["React Native", "JavaScript", "Node.js"],
+    tags: ["React Native", "JavaScript", "Node.js", "MongoDB", "API REST"],
     projectLink: "",
     category: "mobile",
-    featured: false
+    featured: true
   },
   {
-    imgSrc: "/images/project-7.png",
+    imgSrc: "/images/GazInaClient.png",
     title: "GAZ-INA Client",
     description: "Application client pour commande de gaz",
-    tags: ["React Native", "JavaScript", "Node.js"],
+    tags: ["React Native", "JavaScript", "Node.js", "MongoDB", "API REST"],
     projectLink: "",
     category: "mobile",
     featured: false
@@ -75,10 +84,19 @@ const works = [
     imgSrc: "/images/project-8.png",
     title: "GAZ-INA Admin",
     description: "Dashboard administrateur pour la gestion",
-    tags: ["React JS", "JavaScript", "Node.js"],
+    tags: ["React JS", "Tailwind CSS", "JavaScript", "Node.js", "MongoDB", "API REST"],
     projectLink: "",
     category: "web",
     featured: false
+  },
+  {
+    imgSrc: "/images/SiteWebYiel.png",
+    title: "Site Web YielGroup",
+    description: "Site web d'entreprise avec design moderne",
+    tags: ["React JS", "Tailwind CSS", "JavaScript",],
+    projectLink: "https://yielgroup.com/",
+    category: "web",
+    featured: true
   }
 ];
 
@@ -166,7 +184,7 @@ const Work = () => {
               Vous avez un projet en tête ?
             </h3>
             <p className="text-zinc-400 mb-6 max-w-md mx-auto">
-              Discutons de votre vision et créons ensemble quelque chose d'exceptionnel.
+              Discutons de votre vision et créons ensemble quelque chose d&apos;exceptionnel.
             </p>
             <a
               href="#contact"

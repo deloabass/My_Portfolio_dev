@@ -9,7 +9,7 @@ import gsap from "gsap"
 const aboutItems = [
   {
     label: "Projets réalisés",
-    number: 8,
+    number: 9,
     icon: "🚀",
     color: "from-sky-400 to-blue-500"
   },
@@ -21,13 +21,13 @@ const aboutItems = [
   },
   {
     label: "Technologies maîtrisées",
-    number: 12,
+    number: 8,
     icon: "💻",
     color: "from-purple-400 to-pink-500"
   },
   {
     label: "Clients satisfaits",
-    number: 15,
+    number: 3,
     icon: "❤️",
     color: "from-orange-400 to-red-500"
   }
@@ -74,9 +74,9 @@ const About = () => {
               </h2>
               <p className="text-zinc-300 mb-6 text-lg leading-relaxed">
                 Passionné par le développement web et mobile, je crée des expériences numériques 
-                exceptionnelles qui allient <span className="text-sky-400 font-semibold">performance</span>, 
-                <span className="text-emerald-400 font-semibold"> esthétique</span> et 
-                <span className="text-purple-400 font-semibold"> innovation</span>.
+                exceptionnelles qui allient <span className="text-sky-400 font-semibold">Performance</span>, 
+                <span className="text-emerald-400 font-semibold"> Esthétique</span> et 
+                <span className="text-purple-400 font-semibold"> Innovation</span>.
               </p>
               <p className="text-zinc-400 mb-8 leading-relaxed">
                 Spécialisé dans les technologies modernes comme React, React Native, et Node.js, 
@@ -95,7 +95,7 @@ const About = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              {aboutItems.map(({ label, number, icon, color }, index) => (
+              {aboutItems.map(({ label, icon, color }, index) => (
                 <div key={index} className="group">
                   <div className="bg-zinc-800/50 p-6 rounded-2xl hover:bg-zinc-700/50 transition-all duration-300 hover:scale-105 ring-1 ring-zinc-700/30 hover:ring-sky-400/30">
                     <div className="flex items-center justify-between mb-3">
@@ -121,8 +121,8 @@ const About = () => {
           <div className="mt-12 flex items-center justify-between">
             <div className="flex items-center gap-4">
               <img
-                src="/images/logo.png"
-                className="w-12 h-12 rounded-full ring-2 ring-sky-400/30"
+                src="/images/dev.JPG"
+                className="w-12 h-12 object-cover rounded-full ring-2 ring-sky-400/30"
                 alt="Logo"
               />
               <div>

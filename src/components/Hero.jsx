@@ -19,14 +19,14 @@ const Hero = () => {
     
     tl.from(textRef.current.children, {
       y: 100,
-      opacity: 0,
+      // opacity: 0,
       duration: 1,
       stagger: 0.2,
       ease: "power3.out"
     })
     .from(imageRef.current, {
       scale: 0.8,
-      opacity: 0,
+      // opacity: 0,
       duration: 1.2,
       ease: "power3.out"
     }, "-=0.5")
@@ -73,14 +73,14 @@ const Hero = () => {
           </div>
           
           <h2 className="headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10 reveal-up">
-            Créateur d'Expériences
+            Créateur d&apos;Expériences
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-emerald-400">
               Numériques Innovantes
             </span>
           </h2>
           
           <p className="text-zinc-400 text-lg mb-8 max-w-[45ch] leading-relaxed reveal-up">
-            Développeur passionné spécialisé dans la création d'applications web et mobile modernes. 
+            Développeur passionné spécialisé dans la création d&apos;applications web et mobile modernes. 
             Je transforme vos idées en solutions digitales performantes et esthétiques.
           </p>
           
@@ -107,7 +107,7 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-emerald-400">2+</div>
-              <div className="text-sm text-zinc-500">Années d'expérience</div>
+              <div className="text-sm text-zinc-500">Années d&apos;expérience</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-purple-400">100%</div>
@@ -118,10 +118,10 @@ const Hero = () => {
         
         <div className="hidden lg:block" ref={imageRef}>
           <div className="relative">
-            <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t 
+            <figure className="w-full max-w-[100%] ml-auto bg-gradient-to-t 
               from-sky-400/20 via-25% via-sky-400/10 to-65% to-transparent rounded-2xl overflow-hidden
               ring-1 ring-sky-400/20 shadow-2xl shadow-sky-400/10">
-              <img src="/images/myPicture.JPG"
+              <img src="/images/dev.JPG"
                 width={656} 
                 height={800}
                 className="w-full h-full object-cover"

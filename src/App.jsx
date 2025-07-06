@@ -13,7 +13,7 @@ import Hero from "./components/Hero"
 import Skill from "./components/Skill"
 import Work from "./components/Work"
 import SocialStats from "./components/SocialStats"
-import Testimonials from "./components/Testimonials"
+// import Testimonials from "./components/Testimonials"
 
 /**
  * Node modules 
@@ -93,7 +93,7 @@ const App = () => {
         <Skill />
         <Work />
         <SocialStats />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Contact />
       </main>
       <Footer/>

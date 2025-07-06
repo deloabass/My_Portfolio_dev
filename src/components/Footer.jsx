@@ -21,7 +21,7 @@ const sitemap = [
   },
   {
     label: "Reviews",
-    href: "#reviews",
+    href: "#social-stats",
   },
   {
     label: "Contact me",
@@ -36,20 +36,20 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/soumana-abassa-01a2a9265/",
+    href: "https://www.linkedin.com/in/abassa-soumana/",
   },
-  {
-    label: "Twitter X",
-    href: "",
-  },
-  {
-    label: "Instagram",
-    href: "",
-  },
-  {
-    label: "CodePen",
-    href: "",
-  },
+  // {
+  //   label: "Twitter X",
+  //   href: "",
+  // },
+  // {
+  //   label: "Instagram",
+  //   href: "",
+  // },
+  // {
+  //   label: "CodePen",
+  //   href: "",
+  // },
 ];
 
 const Footer = () => {
