@@ -10,26 +10,53 @@ html {
 }
 body {
   @apply bg-zinc-900 text-zinc-50;
+  cursor: none;
 }
 
+/* Curseur personnalisé */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease;
+}
+
+.cursor-dot {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.8) 0%, rgba(56, 189, 248, 0.2) 70%, transparent 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-cursor.cursor-hover {
+  transform: scale(2);
+}
+
+.custom-cursor.cursor-hover .cursor-dot {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.8) 0%, rgba(16, 185, 129, 0.2) 70%, transparent 100%);
+}
 
 /* _____________________________*\
 *TYPOGRAPHY
 \*______________________________*/
 .headline-1, .headline-2 {
   @apply max-w-max;
-  background: -webkit-linear-gradient(0deg, #fafafa, #a1a1a1);
+  background: linear-gradient(135deg, #fafafa 0%, #a1a1a1 50%, #fafafa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .headline-1 {
-  @apply text-5xl leading-tight font-semibold lg:text-[55px] lg:leading-[1.15]
+  @apply text-5xl leading-tight font-bold lg:text-[55px] lg:leading-[1.15]
 }
 .headline-2 {
-  @apply text-3xl lg:text-4xl lg:leading-tight font-semibold
+  @apply text-3xl lg:text-4xl lg:leading-tight font-bold
 }
 .title-1 {
-  @apply text-[22px] font-normal
+  @apply text-[22px] font-semibold
 }
 
 .container {
@@ -43,6 +70,12 @@ body {
 }
 .section {
   @apply pt-20 lg:pt-32
+}
+
+/* Animations reveal */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(80px);
 }
 
 /* _____________________________*\
@@ -62,64 +95,135 @@ body {
 
 /* Navbar */
 .Navbar {
-  @apply absolute top-full mt-2 right-0 min-w-[10rem] p-4 bg-zinc-50/30 
-  rounded-2xl ring-2 ring-zinc-50/5 scale-90 isolate backdrop-blur-md 
+  @apply absolute top-full mt-2 right-0 min-w-[10rem] p-4 bg-zinc-50/10 
+  rounded-2xl ring-2 ring-zinc-50/5 scale-90 isolate backdrop-blur-2xl 
   opacity-0 invisible transition-all duration-500 ease-in-out transform 
-  filter md:static md:flex md:items-center md:mt-3 md:z-0 md:relative md:opacity-100 md:blur-0 
-  md:visible md:scale-100 backdrop-blur-2xl
+  md:static md:flex md:items-center md:mt-3 md:z-0 md:relative md:opacity-100 
+  md:visible md:scale-100 md:bg-transparent md:backdrop-blur-none md:ring-0
 }
 
 .Navbar.active {
-  @apply opacity-100 scale-100 blur-0 visible;
+  @apply opacity-100 scale-100 visible;
 }
 .nav-link {
-  @apply grid items-center h-9 px-4 py-0 text-sm font-medium tracking-wide text-zinc-50/50
-  hover:text-zinc-50 transition-colors
+  @apply grid items-center h-9 px-4 py-0 text-sm font-medium tracking-wide text-zinc-50/70
+  hover:text-zinc-50 transition-colors duration-300 rounded-lg
 }
 .nav-link.active {
   @apply text-zinc-900 duration-500
 }
 .Navbar .active-box {
-  @apply absolute top-4 left-2 right-2 h-9 bg-zinc-50 rounded-lg
-         -z-10 transition-all duration-500 ease-in-out;
+  @apply absolute top-4 left-2 right-2 h-9 bg-gradient-to-r from-sky-400 to-emerald-400 rounded-lg
+         -z-10 transition-all duration-500 ease-in-out shadow-lg;
 }
 
-@layer utilities {
-  .transition-top-left {
-    transition: top 0s ease-in-out, left 0s ease-in-out;
-  }
-}
 /* Button */
 .btn {
-  @apply max-w-max h-9 flex items-center gap-2 px-4 rounded-xl font-medium 
-  text-sm ring-1 ring-zinc-50/5 ring-inset transition-[background-colors]
+  @apply max-w-max h-11 flex items-center gap-2 px-6 rounded-xl font-semibold 
+  text-sm ring-1 ring-zinc-50/5 ring-inset transition-all duration-300
+  hover:scale-105 active:scale-95
 }
 .btn-secondary {
-  @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80
-}
-/* Button */
-.btn .material-symbols-rounded {
-  @apply text-[18px]
-}
-.btn:has( .material-symbols-rounded) {
-  @apply pr-3
+  @apply bg-zinc-50 text-zinc-900 hover:bg-zinc-100 active:bg-zinc-50/80
 }
 .btn-primary {
-  @apply h-11 bg-sky-400 text-zinc-950 hover:bg-sky-300 active:bg-sky-400
+  @apply h-11 bg-gradient-to-r from-sky-400 to-emerald-400 text-zinc-950 
+  hover:from-sky-300 hover:to-emerald-300 active:from-sky-500 active:to-emerald-500
+  shadow-lg shadow-sky-400/25
 }
 .btn-outline {
-  @apply h-11 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800
+  @apply h-11 bg-zinc-800/50 hover:bg-zinc-700/50 active:bg-zinc-800/70
+  ring-zinc-700/50 hover:ring-sky-400/30
 }
+
+/* Form elements */
 .label {
-  @apply block text-zinc-200 text-sm font-normal mb-2
+  @apply block text-zinc-200 text-sm font-semibold mb-2
 }
 .text-field {
-  @apply block outline-none w-full px-3 py-3 text-sm bg-zinc-800 
-  rounded-xl ring-1 ring-inset ring-transparent transition-shadow
-   hover:ring-zinc-50/5 focus:ring-sky-400 focus:ring-2  
-}
-.text-field { 
-  @apply text-zinc-400
+  @apply block outline-none w-full px-4 py-3 text-sm bg-zinc-800/50 
+  rounded-xl ring-1 ring-inset ring-zinc-700/50 transition-all duration-300
+  hover:ring-zinc-600/50 focus:ring-sky-400/50 focus:ring-2 focus:bg-zinc-800/70
+  placeholder:text-zinc-500
 }
 
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+::-webkit-scrollbar-track {
+  background: #27272a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #0ea5e9, #10b981);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0284c7, #059669);
+}
+
+/* Animations personnalisées */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(56, 189, 248, 0.6); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Effets de gradient animés */
+.gradient-text {
+  background: linear-gradient(135deg, #0ea5e9, #10b981, #8b5cf6);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive design amélioré */
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+  
+  body {
+    cursor: auto;
+  }
+}
+
+/* Amélioration des performances */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Transitions fluides pour tous les éléments interactifs */
+a, button, .btn, input, textarea, select {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus states améliorés pour l'accessibilité */
+a:focus-visible, button:focus-visible, .btn:focus-visible {
+  outline: 2px solid #0ea5e9;
+  outline-offset: 2px;
+}
