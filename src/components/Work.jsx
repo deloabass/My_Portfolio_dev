@@ -48,7 +48,7 @@ const works = [
     imgSrc: "/images/InscriptionCodeloccol.png",
     title: "Admission CodeLoccol",
     description: "Système d'admission en ligne avec interface moderne",
-    tags: ["Next.js", "Node.js", "PostgreSQL"],
+    tags: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
     projectLink: "https://apply.codeloccol.org/",
     category: "web",
     featured: true
