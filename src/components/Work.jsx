@@ -39,7 +39,7 @@ const works = [
     imgSrc: "/images/Ihambaobab.png",
     title: "Web Ihambaobab",
     description: "Site web moderne avec API intégrée",
-    tags: ["React JS", "API", "Tailwind CSS"],
+    tags: ["React JS", "API RESET", "Tailwind CSS", "MongoDB", "Node.js",],
     projectLink: "",
     category: "web",
     featured: false
