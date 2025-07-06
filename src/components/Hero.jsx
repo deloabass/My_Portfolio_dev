@@ -102,7 +102,7 @@ const Hero = () => {
           {/* Stats rapides */}
           <div className="flex items-center gap-8 mt-12 reveal-up">
             <div className="text-center">
-              <div className="text-2xl font-bold text-sky-400">8+</div>
+              <div className="text-2xl font-bold text-sky-400">9+</div>
               <div className="text-sm text-zinc-500">Projets réalisés</div>
             </div>
             <div className="text-center">
