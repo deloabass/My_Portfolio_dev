@@ -104,7 +104,7 @@ const Footer = () => {
         </div>
 
         <div className="flex items-center justify-between pt-10 mb-8">
-          <a href="/" className="reveal-up">
+          <a href="abassa.onrender.com" className="reveal-up">
             <img src="/images/logo.png" width={40} height={40} alt="Logo" />
           </a>
           <p className="text-zinc-500 tet-sm reveal-up">
